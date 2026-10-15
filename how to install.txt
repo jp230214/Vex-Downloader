@@ -1,0 +1,52 @@
+Vex YouTube Downloader 2.2.0 - how to install
+=================================
+
+Created by Vex.
+
+OPTION 1 - PORTABLE (recommended)
+---------------------------------
+1. Unzip the download anywhere (for example your Desktop).
+2. Double-click Vex.py.
+3. The first launch shows a setup guide. Read it, then close it.
+
+That is the whole install. Python, PyQt6 and yt-dlp are bundled inside the
+executable, so there is nothing else to download or install.
+
+
+OPTION 2 - RUNNING FROM SOURCE
+------------------------------
+1. Install Python 3.10 or newer from python.org
+   (tick "Add Python to PATH" during setup).
+2. Open a terminal in this folder.
+3. Run:
+
+       pip install -r requirements.txt
+       python Vex.py
+
+   Or on Windows, just double-click run_vex.bat - it installs what is missing
+   and then starts the app.
+
+
+OPTIONAL - FFMPEG
+-----------------
+FFmpeg adds MP3 export and high-quality 1080p+ merging. Without it the app
+still downloads pre-muxed MP4 video fine, but the MP3 option is unavailable.
+
+    winget install Gyan.FFmpeg
+
+Restart the app afterwards. The Settings page will confirm FFmpeg was found.
+
+
+FIRST RUN
+---------
+On first launch the app walks you through setup and writes these files:
+
+    README.md          this overview
+    requirements.txt   the Python packages, for source installs
+    how to install.txt this file
+
+Your settings and download history live outside the app folder, in:
+
+    %APPDATA%\VexDownloader\
+
+To reset everything, close the app, delete that folder, and run it again.

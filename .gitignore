@@ -1,0 +1,97 @@
+# ---- Build output ----------------------------------------------------------
+# The compiled executables are NOT committed. They are 50-90 MB each and
+# would bloat the repository history enormously. Instead they get uploaded
+# as release assets (GitHub -> Releases -> upload the .exe), which is what the
+# setup installer downloads from.
+dist/
+
+# PyInstaller's working directory - regenerated on every build.
+build/
+
+# The auto-generated .spec files. The build scripts recreate these, so there
+# is no reason to track them.
+*.spec
+
+# ---- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ---- Tooling caches --------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ---- Local app data (never belongs in the repo) ---------------------------
+# The running app writes settings/history/logs here:
+#   %APPDATA%\VexDownloader\
+# If you ever point the app at a local folder instead, ignore that too.
+VexDownloader/
+vex.log
+*.log
+
+# ---- Secrets ---------------------------------------------------------------
+# Spotify credentials are entered in the app's Settings and stored in
+# %APPDATA%\VexDownloader\config.json, but never keep a copy of a real
+# Client ID / Secret or any config.json with real values in the repo.
+config.json
+secrets.json
+*.env
+.env
+.env.*
+client_secret*
+
+# ---- Editors / OS ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+*.lnk
+
+# ---- Downloaded media (if you test into the project folder) ---------------
+# The default download target is your real Downloads folder, not here, but if
+# you ever point the app at this folder, keep the audio out of git.
+Downloads/
+*.mp3
+*.m4a
+*.webm
+*.opus
+*.wav
+*.flac
+*.mp4

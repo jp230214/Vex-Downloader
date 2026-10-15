@@ -1,0 +1,13 @@
+# Python packages required to run Vex from source.
+#
+# The portable build bundles all of these - you do NOT need to install them
+# by hand when using the .exe.
+#
+# Install with:  pip install -r requirements.txt
+
+PyQt6>=6.5
+yt-dlp>=2024.1.1
+
+# Optional, recommended but not required:
+#   FFmpeg  - not installable via pip. Enables MP3 export and 1080p+ merging.
+#             Install with:  winget install Gyan.FFmpeg
